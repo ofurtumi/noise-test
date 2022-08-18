@@ -1,0 +1,44 @@
+h1, h2, h3 {
+    margin: 0;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+}
+
+header,
+footer {
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header {
+	justify-content: flex-start;
+}
+
+footer {
+	justify-content: flex-end;
+}
+
+.links {
+    padding-inline-start: 0;
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+canvas {
+	box-shadow: 0em 0em 1em black;
+}
