@@ -78,3 +78,7 @@ function draw(grid, width, median, color) {
 		}
 	}
 }
+
+if (window.location.hostname !== 'www.sjomli.is') {
+	document.querySelector('header').remove();
+}

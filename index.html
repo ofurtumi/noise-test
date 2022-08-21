@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="is">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>da boiler</title>
+    <link rel="stylesheet" href="/global-header.css">
+    <title>noise test</title>
 </head>
+
 <body>
     <header>
-        <h1>noise test</h1>
-        <p>reyna að búa til ehvskonar noise generator byrjaði að fylgja <a href="https://joeiddon.github.io/projects/javascript/perlin">joe iddon</a> en dem bro ég hef ekki hugmynd um hvað þú ert að segja</p>
-        <p>þetta fór alveg í ehv rugl, endaði á að búa til ehv median noise sem er ekki einu sinni flott :(</p>
-        <p>ætla prófa að bæta við ehv litum og rugli í þetta en er orðinn lúmskt þreyttur á þessu þannig veit ekki hvort það fer ehv lengra</p>
+        <!-- navigation ef project er bætt við á sjomli.is, tekið í burtu annars -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">heim</a>
+                </li>
+                <li>
+                    <a href="/verkefni/">verkefni</a>
+                </li>
+                <li>
+                    <a href="/ferilskra.pdf" target="blank">ferilskrá</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <canvas width="500" height="500"></canvas>
-        <div>
-            <button id="in">zoom in</button>
-            <button id="out">zoom out</button>
-        </div>
-        <div>
-            <label for="">interpolated</label>
-            <input type="checkbox" name="generate" id="generate" checked>
-            <label for="color">color</label>
-            <input type="checkbox" name="color" id="color" checked>
-        </div>
+        <section class="description">
+            <h1>noise test</h1>
+            <p>reyna að búa til ehvskonar noise generator byrjaði að fylgja <a
+                    href="https://joeiddon.github.io/projects/javascript/perlin">joe iddon</a> en dem bro ég hef ekki
+                hugmynd um hvað þú ert að segja</p>
+            <p>þetta fór alveg í ehv rugl, endaði á að búa til ehv median noise sem er ekki einu sinni flott :(</p>
+            <p>ætla prófa að bæta við ehv litum og rugli í þetta en er orðinn lúmskt þreyttur á þessu þannig veit ekki
+                hvort það fer ehv lengra</p>
+        </section>
+        <section class="canvas">
+            <canvas width="500" height="500"></canvas>
+            <div>
+                <button id="in">zoom in</button>
+                <button id="out">zoom out</button>
+            </div>
+            <div>
+                <label for="">interpolated</label>
+                <input type="checkbox" name="generate" id="generate" checked>
+                <label for="color">color</label>
+                <input type="checkbox" name="color" id="color" checked>
+            </div>
+        </section>
+        <section class="linkPrison">
+            <h2>links</h2>
+            <ul class="links">
+                <li>
+                    <a href="https://www.github.com/ofurtumi">github</a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com/tumi_tigur">twitter</a>
+                </li>
+                <li><a href="https://www.sjomli.is">homepage</a></li>
+            </ul>
+        </section>
     </main>
-    <footer>
-        <h2>links</h2>
-        <ul class="links">
-            <li>
-                <a href="https://www.github.com/ofurtumi">github</a>
-            </li>
-            <li>
-                <a href="https://www.twitter.com/tumi_tigur">twitter</a>
-            </li>
-            <li><a href="https://www.sjomli.is">homepage</a></li>
-        </ul>
-    </footer>
     <script src="script.js" type="module"></script>
 </body>
+
 </html>

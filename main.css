@@ -1,8 +1,12 @@
+body {
+	font-family: monospace;
+}
+
 h1, h2, h3 {
     margin: 0;
 }
 
-body {
+main {
 	margin: 0;
 	height: 100vh;
 	width: 100vw;
@@ -10,19 +14,19 @@ body {
 	grid-template-columns: 1fr 2fr 1fr;
 }
 
-header,
-footer {
+.description,
+.linkPrison {
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-header {
+.description {
 	justify-content: flex-start;
 }
 
-footer {
+.linkPrison {
 	justify-content: flex-end;
 }
 
@@ -33,20 +37,14 @@ footer {
     gap: 1em;
 }
 
-main {
+.canvas {
 	display: flex;
 	flex-direction: column;
+	gap: 1em;
 	justify-content: center;
 	align-items: center;
 }
 
 canvas {
 	box-shadow: 0em 0em 1em black;
-}
-
-main div {
-	display: flex;
-	justify-content: center;
-	gap: 1em;
-	padding: 1em;
 }
