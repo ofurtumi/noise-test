@@ -49,3 +49,15 @@ main {
 canvas {
 	box-shadow: 0em 0em 1em black;
 }
+
+/* bætt við fyrir þetta verkefni: */
+.sliders {
+	display: flex;
+	justify-content: space-between;
+}
+.sliders span {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
