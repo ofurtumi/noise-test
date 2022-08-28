@@ -9,11 +9,17 @@ let size = 10;
 let raw = [];
 
 multi1 = 1;
-document.querySelector("#multi1").addEventListener("input", (e) => {multi1 = e.target.value})
+document.querySelector('#multi1').addEventListener('input', (e) => {
+	multi1 = e.target.value;
+});
 multi2 = 1;
-document.querySelector("#multi2").addEventListener("input", (e) => {multi2 = e.target.value})
+document.querySelector('#multi2').addEventListener('input', (e) => {
+	multi2 = e.target.value;
+});
 multi3 = 1;
-document.querySelector("#multi3").addEventListener("input", (e) => {multi3 = e.target.value})
+document.querySelector('#multi3').addEventListener('input', (e) => {
+	multi3 = e.target.value;
+});
 
 function calcRow(size, func) {
 	let tempRow = [];
@@ -63,15 +69,29 @@ draw(getCalculated(raw));
 function draw(grid) {
 	grid.forEach((val, i) => {
 		val.forEach((inner, j) => {
-			ctx.fillStyle = `hsl(${inner*multi1},${inner*multi2}%,${inner*multi3}%`;
+			ctx.fillStyle = `hsl(${inner * multi1},${inner * multi2}%,${
+				inner * multi3
+			}%`;
 			ctx.fillRect(j * size, i * size, size, size);
 		});
 	});
 }
 
+// ball(10, 10);
+async function ball(rad, size) {
+	const middle = 500 / 2;
+	ctx.fillStyle = "#000";
+
+	for (let i = 0; i < 360; i++) {
+		let dr = i*(Math.PI / 180);
+		ctx.fillRect(middle + rad * size * Math.sin(dr), middle + rad * size * Math.cos(dr), 10, 10)
+		await new Promise((r) => setTimeout(r, 10));
+	}
+}
+
 animate();
 async function animate() {
-	await new Promise(r => setTimeout(r, 50));
+	await new Promise((r) => setTimeout(r, 50));
 	// await new Promise((r) => setTimeout(r, 2000));
 	// console.log(raw.shift());
 	raw = raw.slice(1);
@@ -81,6 +101,7 @@ async function animate() {
 		})
 	);
 	draw(getCalculated(raw));
+	// ball(150, 10);
 
 	window.requestAnimationFrame(animate);
 }
